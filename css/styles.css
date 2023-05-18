@@ -103,7 +103,7 @@ img {
 .nav-list-item:hover,
 .nav-list-item:focus {
   color: #404bbf;
-  transition-property: background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -125,7 +125,7 @@ img {
 .contact:hover,
 .contact:focus {
   color: #404bbf;
-  transition-property: background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -165,6 +165,7 @@ img {
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
+  color: #404bbf;
 }
 
 /* ==============================MAIN SECTION=============================== */
@@ -414,7 +415,7 @@ img {
 .customers-link:focus {
   border-color: #404bbf;
   color: #404bbf;
-  transition-property: background-color;
+  transition-property: background-color, border-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -493,7 +494,6 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-}
 
 .footer-social-network-icon {
   fill: #f4f4fd;
@@ -521,8 +521,14 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 576px;
+  border-radius: 4px;
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -534,11 +540,30 @@ img {
   justify-content: center;
   width: 24px;
   height: 24px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: #ffffff;
+}
+
+.modal-close-icon {
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -583,6 +608,9 @@ img {
   color: #ffffff;
   background: #404bbf;
   border: 1px solid transparent;
+  transition: color, backround-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-list {
@@ -625,12 +653,17 @@ img {
 .project-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-container {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
+
+/* ==============================overlay============================== */
 
 .overlay {
   position: absolute;
