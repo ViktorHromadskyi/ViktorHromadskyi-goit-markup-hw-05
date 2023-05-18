@@ -68,7 +68,7 @@ img {
   overflow: hidden;
 }
 
-/* Хедер */
+/* ==============================header=============================== */
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -90,6 +90,7 @@ img {
 }
 
 .nav-list-item {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -102,6 +103,9 @@ img {
 .nav-list-item:hover,
 .nav-list-item:focus {
   color: #404bbf;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress {
@@ -121,6 +125,9 @@ img {
 .contact:hover,
 .contact:focus {
   color: #404bbf;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header-container {
@@ -148,9 +155,21 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-/*основний блок*/
+.nav-list-pseudo:after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: "";
+  font-size: 10px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
 
-/* сторінка герой */
+/* ==============================MAIN SECTION=============================== */
+
+/* ==============================hero=============================== */
 
 .hero-section {
   max-width: 1440px;
@@ -201,9 +220,12 @@ img {
 .order-service-btn:hover,
 .order-service-btn:focus {
   background: #404bbf;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* наші цілі */
+/* ==============================our goals=============================== */
 
 .goals {
   font-weight: 500;
@@ -242,7 +264,7 @@ img {
   align-items: center;
 }
 
-/* приклади робіт */
+/* ==============================work examples=============================== */
 
 .work-examples-section {
   padding-bottom: 120px;
@@ -264,7 +286,7 @@ img {
   gap: 24px;
 }
 
-/* наша команда */
+/* ==============================our team=============================== */
 
 .our-team {
   background-color: #f4f4fd;
@@ -343,13 +365,16 @@ img {
 .social-network-link:hover,
 .social-network-link:focus {
   background-color: #404bbf;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-icon {
   fill: #f4f4fd;
 }
 
-/* Наші клієнти */
+/* ==============================our clients=============================== */
 
 .customers-title {
   font-weight: 700;
@@ -389,12 +414,16 @@ img {
 .customers-link:focus {
   border-color: #404bbf;
   color: #404bbf;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-customers-list {
   fill: currentColor;
 }
-/* Футер */
+
+/* ==============================footer=============================== */
 
 .footer {
   background-color: #2e2f42;
@@ -460,12 +489,64 @@ img {
 .footer-social-network-link:hover,
 .footer-social-network-link:focus {
   background-color: #31d0aa;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 }
 
 .footer-social-network-icon {
   fill: #f4f4fd;
 }
-/* portfolio */
+
+/* ==============================backdrop=============================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 584px;
+  background-color: #fcfcfc;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* ==============================portfolio=============================== */
 
 .main-section {
   padding-top: 96px;
@@ -535,6 +616,11 @@ img {
   display: block;
 }
 
+.project-link:hover .overlay,
+.project-link:focus .overlay {
+  transform: translate(0, 0);
+}
+
 .project-link:hover,
 .project-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -545,4 +631,29 @@ img {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
-/* next page */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 40px 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  transform: translate(0%, 100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-list-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
