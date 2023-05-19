@@ -76,7 +76,7 @@ img {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: #404bbf;
+  color: #4d5ae5;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -103,6 +103,13 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header-studio-link {
+  color: #404bbf;
+}
+
+.header-portfolio-link {
+  color: #404bbf;
+}
 .nav-list-item:hover,
 .nav-list-item:focus {
   color: #404bbf;
