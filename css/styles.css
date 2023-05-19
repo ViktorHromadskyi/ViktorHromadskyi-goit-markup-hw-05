@@ -98,14 +98,14 @@ img {
   color: #2e2f42;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-item:hover,
 .nav-list-item:focus {
   color: #404bbf;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress {
@@ -120,14 +120,14 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:hover,
 .contact:focus {
   color: #404bbf;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header-container {
@@ -216,14 +216,14 @@ img {
   border: none;
   margin-left: auto;
   margin-right: auto;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service-btn:hover,
 .order-service-btn:focus {
   background: #404bbf;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ==============================our goals=============================== */
@@ -361,14 +361,14 @@ img {
   height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-link:hover,
 .social-network-link:focus {
   background-color: #404bbf;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-icon {
@@ -409,15 +409,15 @@ img {
   height: 100%;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  transition-property: background-color, border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border-color: #404bbf;
   color: #404bbf;
-  transition-property: background-color, border-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-customers-list {
@@ -485,14 +485,14 @@ img {
   height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-network-link:hover,
 .footer-social-network-link:focus {
   background-color: #31d0aa;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-network-icon {
@@ -553,10 +553,6 @@ img {
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
-}
-
-.modal-close-icon:hover,
-.modal-close-icon:focus {
   fill: #ffffff;
 }
 
@@ -601,6 +597,9 @@ img {
   border-radius: 4px;
   padding: 12px 24px;
   border: 1px solid #e7e9fc;
+  transition: color, backround-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -608,9 +607,6 @@ img {
   color: #ffffff;
   background: #404bbf;
   border: 1px solid transparent;
-  transition: color, backround-color, border-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-list {
